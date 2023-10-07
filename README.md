@@ -1,5 +1,5 @@
 # Flutter
-# Cross-Platform Framework Comparison: Flutter vs. React Native
+## Cross-Platform Framework Comparison: Flutter vs. React Native
 
 ## Abstract:
 
