@@ -22,4 +22,4 @@ Questo progetto funge da studio comparativo tra due popolari framework di svilup
 ## Tesi
 
 I dettagliati risultati e l'analisi di questo progetto saranno presentati nel 
-documento di tesi dal titolo "Confronto tra i Framework Cross-Platform: Flutter e React Native," 
+documento di tesi dal titolo "Confronto tra i Framework Cross-Platform: Flutter e React Native" 
