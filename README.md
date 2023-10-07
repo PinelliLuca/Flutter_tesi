@@ -1,4 +1,5 @@
-# Title: Cross-Platform Framework Comparison: Flutter vs. React Native
+# Flutter
+# Cross-Platform Framework Comparison: Flutter vs. React Native
 
 ## Abstract:
 
@@ -14,7 +15,8 @@ will be presented in the thesis document titled "Comparison of Cross-Platform Fr
 
 ## Panoramica
 
-Questo progetto funge da studio comparativo tra due popolari framework di sviluppo di app mobili cross-platform, Flutter e React Native. L'obiettivo è valutarne punti di forza e debolezza attraverso la realizzazione di applicazioni di lista delle cose da fare (To-Do) identiche utilizzando entrambi i framework. L'attenzione principale 
+Questo progetto funge da studio comparativo tra due popolari framework di sviluppo di app mobili cross-platform, Flutter e React Native. L'obiettivo è valutarne punti di forza e debolezza attraverso la realizzazione di due To-Do-list app identiche utilizzando entrambi i framework.
+ L'attenzione principale 
 è rivolta agli aspetti come la velocità di sviluppo, le prestazioni, l'interfaccia utente e la manutenibilità del codice.
 
 ## Tesi
