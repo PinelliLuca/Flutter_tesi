@@ -1,16 +1,9 @@
-# tesi_flutter
+# Tesi di laurea: Comparison between flutter adn react native
 
-A new Flutter project.
+App per la tesi di laurea triennale in ingegneria informatica a Modena (unimore)
 
-## Getting Started
+## In cosa consiste:
 
-This project is a starting point for a Flutter application.
+Questa app è il primo di due progetti. Consiste quindi in un' app che è copia di una medesima app 
+create con react native per permettere il confronto tra i due framework.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
