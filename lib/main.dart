@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               children: <Widget>[
                 FadeInUp(duration: Duration(milliseconds: 1000), child: Text("Tesi di laurea triennale", style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),)),
                 SizedBox(height: 20,),
-                FadeInUp(duration: Duration(milliseconds: 1300), child: Text("Flutter: interfacce grafiche.", style: TextStyle(color: Colors.white, fontSize: 25),)),
+                FadeInUp(duration: Duration(milliseconds: 1300), child: Text("Flutter: interfacce grafiche", style: TextStyle(color: Colors.white, fontSize: 25),)),
                 SizedBox(height: 100,),
                 InkWell(
                   onTap: () {
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     builder: (context, child) => Transform.scale(
                       scale: _scaleAnimation.value,
                       child: FadeInUp(duration: Duration(milliseconds: 1500), child: Container(
-                        height: 50,
+                        height: 60,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50)
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     child: Text("Create Account", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                   ),
                 )),
-                SizedBox(height: 30,),
+                SizedBox(height: 50,),
 
               ],
             ),
