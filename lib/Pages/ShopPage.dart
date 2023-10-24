@@ -90,7 +90,7 @@ class _ShopPageState extends State<ShopPage> {
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         makeCategory(image: 'assets/images/beauty.jpg', title: 'Beauty', tag: 'beauty'),
-                        makeCategory(image: 'assets/images/clothes.jpg', title: 'Clothes', tag: 'clothes'),
+                        makeCategory(image: 'assets/images/vestiti.jpg', title: 'Clothes', tag: 'clothes'),
                         makeCategory(image: 'assets/images/profumi.jpg', title: 'Perfume', tag: 'perfume'),
                         makeCategory(image: 'assets/images/occhiali.jpg', title: 'Glasses', tag: 'glass'),
                       ],

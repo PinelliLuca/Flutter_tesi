@@ -100,7 +100,7 @@ class _CategoryPageState extends State<CategoryPage> {
                   SizedBox(height: 20,),
                   FadeInUp(duration: Duration(milliseconds: 1500), child:  makeProduct(image: 'assets/images/vestiti-uomo.jpg', title: 'Clothes for men', price: '100\$')),
                   FadeInUp(duration: Duration(milliseconds: 1600), child:  makeProduct(image: 'assets/images/vestiti-donna.jpg', title: 'Clothes for Women', price: '100\$')),
-                  FadeInUp(duration: Duration(milliseconds: 1700), child:  makeProduct(image: 'assets/images/occhiali.jpg', title: 'Glass', price: '100\$')),
+                  FadeInUp(duration: Duration(milliseconds: 1700), child:  makeProduct(image: 'assets/images/occhiali.jpg', title: 'Glasses', price: '100\$')),
                   FadeInUp(duration: Duration(milliseconds: 1800), child:  makeProduct(image: 'assets/images/profumi.jpg', title: 'Perfume', price: '100\$')),
                   FadeInUp(duration: Duration(milliseconds: 1900), child:  makeProduct(image: 'assets/images/vestiti.jpg', title: 'Person', price: '100\$')),
                 ],
