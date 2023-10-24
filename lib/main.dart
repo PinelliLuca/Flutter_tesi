@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/splash.jpg'),
+                image: AssetImage('assets/images/cart.jpg'),
                 fit: BoxFit.cover
             )
         ),
@@ -69,9 +69,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                FadeInUp(duration: Duration(milliseconds: 1000), child: Text("Brand New Perspective", style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),)),
+                FadeInUp(duration: Duration(milliseconds: 1000), child: Text("Tesi di laurea triennale", style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),)),
                 SizedBox(height: 20,),
-                FadeInUp(duration: Duration(milliseconds: 1300), child: Text("Let's start with our summer collection.", style: TextStyle(color: Colors.white, fontSize: 20),)),
+                FadeInUp(duration: Duration(milliseconds: 1300), child: Text("Flutter: interfacce grafiche.", style: TextStyle(color: Colors.white, fontSize: 25),)),
                 SizedBox(height: 100,),
                 InkWell(
                   onTap: () {
