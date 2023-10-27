@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-
+import 'ShoppingCart.dart';
 class CategoryPage extends StatefulWidget {
   final String? title;
   final String? image;
@@ -164,10 +164,16 @@ class _CategoryPageState extends State<CategoryPage> {
                           color: Colors.white
                       ),
                       child: Center(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => ShoppingCart()));
+                          },
+
                         child: Icon(Icons.add_shopping_cart, size: 18, color: Colors.grey[700],),
+
                       )
                   ))
-                ],
+                  ) ],
               ),
             ],
           ),
