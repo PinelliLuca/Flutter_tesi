@@ -49,7 +49,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/cart.jpg'),
+                image: AssetImage('assets/Gif/vestiti-che-scorrono.gif'),
+
                 fit: BoxFit.cover
             )
         ),
