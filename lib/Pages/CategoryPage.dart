@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'ShoppingCart.dart';
+import 'Sport.dart';
+
 class CategoryPage extends StatefulWidget {
   final String? title;
   final String? image;
@@ -20,95 +22,101 @@ class _CategoryPageState extends State<CategoryPage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Hero(
-              tag: widget.tag!,
-              child: Material(
-                child: Container(
-                  height: 360,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(widget.image!),
-                          fit: BoxFit.cover
-                      )
-                  ),
-                  child: Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            begin: Alignment.bottomRight,
-                            colors: [
-                              Colors.black.withOpacity(.8),
-                              Colors.black.withOpacity(.1),
-                            ]
-                        )
-                    ),
-                    child: Column(
+        Hero(
+        tag: widget.tag!,
+          child: Material(
+            child: InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Sport()));
+              },
+
+              child: Container(
+              height: 360,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(widget.image!),
+                      fit: BoxFit.cover
+                  )
+              ),
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        colors: [
+                          Colors.black.withOpacity(.8),
+                          Colors.black.withOpacity(.1),
+                        ]
+                    )
+                ),
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 40,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        SizedBox(height: 40,),
+                        IconButton(
+                          icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
-                            IconButton(
-                              icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                FadeInUp(duration: Duration(milliseconds: 1200), child: IconButton(
-                                  icon: Icon(Icons.search, color: Colors.white,), onPressed: () {},
-                                )),
-                                FadeInUp(duration: Duration(milliseconds: 1200), child: IconButton(
-                                  icon: Icon(Icons.favorite, color: Colors.white,), onPressed: () {},
-                                )),
-                                FadeInUp(duration: Duration(milliseconds: 1300), child: IconButton(
-                                  icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: () {},
-                                )),
-                              ],
-                            ),
+                            FadeInUp(duration: Duration(milliseconds: 1200), child: IconButton(
+                              icon: Icon(Icons.search, color: Colors.white,), onPressed: () {},
+                            )),
+                            FadeInUp(duration: Duration(milliseconds: 1200), child: IconButton(
+                              icon: Icon(Icons.favorite, color: Colors.white,), onPressed: () {},
+                            )),
+                            FadeInUp(duration: Duration(milliseconds: 1300), child: IconButton(
+                              icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: () {},
+                            )),
                           ],
                         ),
-                        SizedBox(
-                          height: 40,
-                        ),
-                        FadeInUp(duration: Duration(milliseconds: 1200), child: Text(widget.title!, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 40),))
                       ],
                     ),
-                  ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    FadeInUp(duration: Duration(milliseconds: 1200), child: Text(widget.title!, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 40),))
+                  ],
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: Column(
-                children: <Widget>[
-                  FadeInUp(duration: Duration(milliseconds: 1400), child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text("New Product", style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),),
-                      Row(
-                        children: <Widget>[
-                          Text("View More", style: TextStyle(color: Colors.grey),),
-                          SizedBox(width: 5,),
-                          Icon(Icons.arrow_forward_ios, size: 11, color: Colors.grey,)
-                        ],
-                      ),
-                    ],
-                  )),
-                  SizedBox(height: 20,),
-                  FadeInUp(duration: Duration(milliseconds: 1500), child:  makeProduct(image: 'assets/images/vestiti-uomo.jpg', title: 'Clothes for men', price: '100\$')),
-                  FadeInUp(duration: Duration(milliseconds: 1600), child:  makeProduct(image: 'assets/images/vestiti-donna.jpg', title: 'Clothes for Women', price: '100\$')),
-                  FadeInUp(duration: Duration(milliseconds: 1700), child:  makeProduct(image: 'assets/images/occhiali.jpg', title: 'Glasses', price: '100\$')),
-                  FadeInUp(duration: Duration(milliseconds: 1800), child:  makeProduct(image: 'assets/images/profumi.jpg', title: 'Perfume', price: '100\$')),
-                  FadeInUp(duration: Duration(milliseconds: 1900), child:  makeProduct(image: 'assets/images/vestiti.jpg', title: 'Person', price: '100\$')),
-                ],
-              ),
-            )
-          ],
+          ),
         ),
       ),
+      Padding(
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: <Widget>[
+            FadeInUp(duration: Duration(milliseconds: 1400), child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("New Product", style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),),
+                Row(
+                  children: <Widget>[
+                    Text("View More", style: TextStyle(color: Colors.grey),),
+                    SizedBox(width: 5,),
+                    Icon(Icons.arrow_forward_ios, size: 11, color: Colors.grey,)
+                  ],
+                ),
+              ],
+            )),
+            SizedBox(height: 20,),
+            FadeInUp(duration: Duration(milliseconds: 1500), child:  makeProduct(image: 'assets/images/vestiti-uomo.jpg', title: 'Casual', price: 'from 69.99\$')),
+            FadeInUp(duration: Duration(milliseconds: 1600), child:  makeProduct(image: 'assets/images/sport.jpeg', title: 'Sport', price: 'from 15.99\$')),
+            FadeInUp(duration: Duration(milliseconds: 1700), child:  makeProduct(image: 'assets/images/hat.jpeg', title: 'Hat', price: 'from 19,99\$')),
+            FadeInUp(duration: Duration(milliseconds: 1800), child:  makeProduct(image: 'assets/images/occhiali.jpg', title: 'Glasses', price: 'from 189,99\$')),
+            FadeInUp(duration: Duration(milliseconds: 1900), child:  makeProduct(image: 'assets/images/Airjordan2.jpg', title: 'Shoes', price: 'from 189,99\$')),
+          ],
+        ),
+      )
+      ],
+    ),
+    ),
     );
   }
 
@@ -164,15 +172,15 @@ class _CategoryPageState extends State<CategoryPage> {
                           color: Colors.white
                       ),
                       child: Center(
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => ShoppingCart()));
-                          },
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => ShoppingCart()));
+                            },
 
-                        child: Icon(Icons.add_shopping_cart, size: 18, color: Colors.grey[700],),
+                            child: Icon(Icons.add_shopping_cart, size: 18, color: Colors.grey[700],),
 
-                      )
-                  ))
+                          )
+                      ))
                   ) ],
               ),
             ],
