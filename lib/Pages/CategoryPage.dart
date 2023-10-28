@@ -25,10 +25,7 @@ class _CategoryPageState extends State<CategoryPage> {
         Hero(
         tag: widget.tag!,
           child: Material(
-            child: InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Sport()));
-              },
+
 
               child: Container(
               height: 360,
@@ -85,7 +82,7 @@ class _CategoryPageState extends State<CategoryPage> {
                 ),
               ),
             ),
-          ),
+
         ),
       ),
       Padding(
@@ -121,7 +118,12 @@ class _CategoryPageState extends State<CategoryPage> {
   }
 
   Widget makeProduct({image, title, price}) {
-    return Container(
+    return InkWell(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Sport()));
+      },
+      child: Container(
+
         height: 200,
         width: double.infinity,
         margin: EdgeInsets.only(bottom: 20),
@@ -133,6 +135,7 @@ class _CategoryPageState extends State<CategoryPage> {
             )
         ),
         child: Container(
+
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -185,7 +188,8 @@ class _CategoryPageState extends State<CategoryPage> {
               ),
             ],
           ),
-        )
+        ),
+        ),
     );
   }
 }
