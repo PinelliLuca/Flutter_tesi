@@ -12,16 +12,17 @@ class Sport extends StatelessWidget {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
+            margin: const EdgeInsets.only(top: 100),
             height: 300,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/runners.jpg'),
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
               ),
             ),
           ),
           Positioned(
-            top: -20,
+            top: 20,
             left: -120,  // Mancava il due punti
             child: Container(
               width: 400,
