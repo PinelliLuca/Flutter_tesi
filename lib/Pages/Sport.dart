@@ -1,3 +1,4 @@
+import 'package:day16_shopping/Pages/CategoryPage.dart';
 import 'package:day16_shopping/Pages/DressRoom.dart';
 import 'package:flutter/material.dart';
 import 'DressRoom.dart';
@@ -6,12 +7,10 @@ class Sport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Sport'),
-        backgroundColor: Colors.lightBlueAccent[900],
-      ),
       body: Stack(
         children: [
+
+
           Container(
             width: MediaQuery.of(context).size.width,
             margin: const EdgeInsets.only(top: 70),
@@ -62,18 +61,23 @@ class Sport extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            padding: const EdgeInsets.only(top: 45, left: 2),
+
+            child: Row(
+              children: [
+                IconButton(
+                  icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
-}
-Widget toDressRoom(BuildContext context, {image, title, tag}){
-  return InkWell(
-    onTap: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => DressRoom()));
-    },
-    child: Container(
-
-    ),
-  );
 }

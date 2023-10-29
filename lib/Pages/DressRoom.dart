@@ -10,7 +10,7 @@ class DressRoom extends StatelessWidget {
       ),
       body: Container(
         child: Image(
-          image: AssetImage('assets/Gif/dressroom.gif'),
+          image: AssetImage('assets/images/hat.jpeg'),
         ),
       ),
     );

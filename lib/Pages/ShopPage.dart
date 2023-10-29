@@ -113,8 +113,8 @@ class _ShopPageState extends State<ShopPage> {
                       children: <Widget>[
                         makeBestCategory(image: 'assets/images/tech.jpg', title: 'Tech'),
                         makeBestCategory(image: 'assets/images/watch.jpg', title: 'Watch'),
-                        makeBestCategory(image: 'assets/images/perfume.jpg', title: 'Perfume'),
-                        makeBestCategory(image: 'assets/images/glass.jpg', title: 'Glass'),
+                        makeBestCategory(image: 'assets/images/profumi.jpg', title: 'Perfume'),
+                        makeBestCategory(image: 'assets/images/occhiali.jpg', title: 'Glass'),
                       ],
                     ),
                   ),
