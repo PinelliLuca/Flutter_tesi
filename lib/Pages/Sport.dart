@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:animate_do/animate_do.dart';
 import 'DressRoom.dart';
+import 'ShoppingCart.dart';
 
 class Sport extends StatelessWidget {
   @override
@@ -22,6 +22,7 @@ class Sport extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.shopping_cart, color: Colors.black),
             onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ShoppingCart()));
             },
           ),
         ],
@@ -73,7 +74,7 @@ class Sport extends StatelessWidget {
               ],
             ),
           ),
-          // Elenco dei prodotti da vendere
+
           Positioned(
             top: 400,
             left: 0,
@@ -82,19 +83,19 @@ class Sport extends StatelessWidget {
             child: ListView(
               children: [
                 ProductBox(
-                  imagePath: 'assets/images/vestiti.jpg',
+                  imagePath: 'assets/images/t-shirt.jpg',
                   title: 'T-shirt',
                   price: '€ 20.00',
                 ),
                 ProductBox(
-                  imagePath: 'assets/images/occhiali.jpg',
+                  imagePath: 'assets/images/pantaloncini.jpg',
                   title: 'Pantaloncini',
-                  price: '€ 60.00',
+                  price: '€ 75.00',
                 ),
                 ProductBox(
-                  imagePath: 'assets/images/occhiali.jpg',
+                  imagePath: 'assets/images/mercurial.jpg',
                   title: 'Scarpe',
-                  price: '€ 60.00',
+                  price: '€ 120.00',
                 ),
 
                 // Qui per aggiungere altri prodotti ma non ci perdere tempo
