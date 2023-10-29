@@ -1,26 +1,38 @@
-import 'package:day16_shopping/Pages/CategoryPage.dart';
-import 'package:day16_shopping/Pages/DressRoom.dart';
 import 'package:flutter/material.dart';
+import 'package:animate_do/animate_do.dart';
 import 'DressRoom.dart';
 
 class Sport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text('Sport'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search, color: Colors.black),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.shopping_cart, color: Colors.black),
+            onPressed: () {
+            },
+          ),
+        ],
+      ),
       body: Stack(
         children: [
-
-
-          Container(
-            width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(top: 70),
-            height: 300,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/runners.jpg'),
-                fit: BoxFit.fill,
-              ),
-            ),
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Image.asset('assets/images/runners.jpg'),
           ),
           Positioned(
             top: 20,
@@ -35,15 +47,15 @@ class Sport extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 100,
-            margin: const EdgeInsets.only(top: 300, left: 200),
+          // Scritta sport e abbigliamento sportivo
+          Positioned(
+            top: 20,
+            left: 200,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Sport",
+                  'Sport',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
@@ -51,7 +63,7 @@ class Sport extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Abbigliamento sportivo",
+                  'Abbigliamento sportivo',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -61,22 +73,93 @@ class Sport extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            padding: const EdgeInsets.only(top: 45, left: 2),
-
-            child: Row(
+          // Elenco dei prodotti da vendere
+          Positioned(
+            top: 400,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: ListView(
               children: [
-                IconButton(
-                  icon: Icon(Icons.arrow_back_ios, color: Colors.black),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
+                ProductBox(
+                  imagePath: 'assets/images/vestiti.jpg',
+                  title: 'T-shirt',
+                  price: '€ 20.00',
+                ),
+                ProductBox(
+                  imagePath: 'assets/images/occhiali.jpg',
+                  title: 'Pantaloncini',
+                  price: '€ 60.00',
+                ),
+                ProductBox(
+                  imagePath: 'assets/images/occhiali.jpg',
+                  title: 'Scarpe',
+                  price: '€ 60.00',
                 ),
 
+                // Qui per aggiungere altri prodotti ma non ci perdere tempo
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ProductBox extends StatelessWidget {
+  final String imagePath;
+  final String title;
+  final String price;
+
+  ProductBox({
+    required this.imagePath,
+    required this.title,
+    required this.price,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DressRoom(),
+          ),
+        );
+      },
+      child: Container(
+        margin: const EdgeInsets.all(10),
+        width: 150,
+        height: 200,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(imagePath),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                title,
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                price,
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
