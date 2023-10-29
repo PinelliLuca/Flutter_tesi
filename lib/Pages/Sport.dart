@@ -137,7 +137,7 @@ class ProductBox extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(imagePath),
-            fit: BoxFit.cover,
+          //  fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(15),
         ),
@@ -149,14 +149,14 @@ class ProductBox extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 title,
-                style: TextStyle(color: Colors.white, fontSize: 18),
+                style: TextStyle(color: Colors.blue, fontSize: 25),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 price,
-                style: TextStyle(color: Colors.white, fontSize: 16),
+                style: TextStyle(color: Colors.blueGrey, fontSize: 16),
               ),
             ),
           ],
