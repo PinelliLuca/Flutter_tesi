@@ -87,19 +87,19 @@ class Sport extends StatelessWidget {
                   imagePath: 'assets/images/t-shirt.jpg',
                   title: 'T-shirt',
                   price: '€ 20.00',
-                  parentContext: context,
+              //    parentContext: context,
                 ),
                 ProductBox(
                   imagePath: 'assets/images/pantaloncini.jpg',
                   title: 'Pantaloncini',
                   price: '€ 75.00',
-                  parentContext: context,
+               //   parentContext: context,
                 ),
                 ProductBox(
                   imagePath: 'assets/images/mercurial.jpg',
                   title: 'Scarpe',
                   price: '€ 120.00',
-                  parentContext: context,
+                //  parentContext: context,
                 ),
 
                 // Qui per aggiungere altri prodotti ma non ci perdere tempo
@@ -116,13 +116,13 @@ class ProductBox extends StatelessWidget {
   final String imagePath;
   final String title;
   final String price;
-  final BuildContext parentContext;
+ // final BuildContext parentContext;
 
   ProductBox({
     required this.imagePath,
     required this.title,
     required this.price,
-    required this.parentContext,
+ //   required this.parentContext,
   });
 
   @override
@@ -130,7 +130,8 @@ class ProductBox extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-          parentContext,
+          context,
+       //   parentContext,
 
           MaterialPageRoute(
             builder: (context) => DressRoom(),
