@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'DressRoom.dart';
 import 'ShoppingCart.dart';
 
+
 class Sport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -86,16 +87,19 @@ class Sport extends StatelessWidget {
                   imagePath: 'assets/images/t-shirt.jpg',
                   title: 'T-shirt',
                   price: '€ 20.00',
+                  parentContext: context,
                 ),
                 ProductBox(
                   imagePath: 'assets/images/pantaloncini.jpg',
                   title: 'Pantaloncini',
                   price: '€ 75.00',
+                  parentContext: context,
                 ),
                 ProductBox(
                   imagePath: 'assets/images/mercurial.jpg',
                   title: 'Scarpe',
                   price: '€ 120.00',
+                  parentContext: context,
                 ),
 
                 // Qui per aggiungere altri prodotti ma non ci perdere tempo
@@ -112,11 +116,13 @@ class ProductBox extends StatelessWidget {
   final String imagePath;
   final String title;
   final String price;
+  final BuildContext parentContext;
 
   ProductBox({
     required this.imagePath,
     required this.title,
     required this.price,
+    required this.parentContext,
   });
 
   @override
@@ -124,20 +130,22 @@ class ProductBox extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-          context,
+          parentContext,
+
           MaterialPageRoute(
             builder: (context) => DressRoom(),
           ),
         );
       },
       child: Container(
+
         margin: const EdgeInsets.all(10),
         width: 150,
         height: 200,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(imagePath),
-          //  fit: BoxFit.cover,
+           fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(15),
         ),

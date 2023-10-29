@@ -68,7 +68,9 @@ class _CategoryPageState extends State<CategoryPage> {
                               icon: Icon(Icons.favorite, color: Colors.white,), onPressed: () {},
                             )),
                             FadeInUp(duration: Duration(milliseconds: 1300), child: IconButton(
-                              icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: () {},
+                              icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => ShoppingCart()));
+                            },
                             )),
                           ],
                         ),
@@ -154,6 +156,7 @@ class _CategoryPageState extends State<CategoryPage> {
               FadeInUp(duration: Duration(milliseconds: 1400), child: Align(
                 alignment: Alignment.topRight,
                 child: Icon(Icons.favorite_border, color: Colors.white,),
+
               )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
