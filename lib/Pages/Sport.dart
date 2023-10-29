@@ -1,4 +1,6 @@
+import 'package:day16_shopping/Pages/DressRoom.dart';
 import 'package:flutter/material.dart';
+import 'DressRoom.dart';
 
 class Sport extends StatelessWidget {
   @override
@@ -12,7 +14,7 @@ class Sport extends StatelessWidget {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(top: 100),
+            margin: const EdgeInsets.only(top: 70),
             height: 300,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -23,10 +25,10 @@ class Sport extends StatelessWidget {
           ),
           Positioned(
             top: 20,
-            left: -120,  // Mancava il due punti
+            left: -100,
             child: Container(
-              width: 400,
-              height: 400,
+              width: 350,
+              height: 350,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/womanrun-01.png'),
@@ -37,6 +39,7 @@ class Sport extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             height: 100,
+            margin: const EdgeInsets.only(top: 300, left: 200),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -63,4 +66,14 @@ class Sport extends StatelessWidget {
       ),
     );
   }
+}
+Widget toDressRoom(BuildContext context, {image, title, tag}){
+  return InkWell(
+    onTap: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => DressRoom()));
+    },
+    child: Container(
+
+    ),
+  );
 }
