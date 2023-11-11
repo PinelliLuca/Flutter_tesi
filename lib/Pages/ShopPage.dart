@@ -111,7 +111,7 @@ class _ShopPageState extends State<ShopPage> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        makeBestCategory(image: 'assets/images/tech.jpg', title: 'Tech'),
+                        makeBestCategory(image: 'assets/images/borsa.jpg', title: 'Purse'),
                         makeBestCategory(image: 'assets/images/watch.jpg', title: 'Watch'),
                         makeBestCategory(image: 'assets/images/profumi.jpg', title: 'Perfume'),
                         makeBestCategory(image: 'assets/images/occhiali.jpg', title: 'Glass'),

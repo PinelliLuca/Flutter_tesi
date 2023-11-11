@@ -84,15 +84,15 @@ class Sport extends StatelessWidget {
             child: ListView(
               children: [
                 ProductBox(
-                  imagePath: 'assets/images/t-shirt.jpg',
-                  title: 'T-shirt',
-                  price: '€ 20.00',
+                  imagePath: 'assets/images/milan2.jpg',
+                  title: 'Milan',
+                  price: '€ 90.00',
               //    parentContext: context,
                 ),
                 ProductBox(
-                  imagePath: 'assets/images/pantaloncini.jpg',
-                  title: 'Pantaloncini',
-                  price: '€ 75.00',
+                  imagePath: 'assets/images/juve.jpg',
+                  title: 'Juventus',
+                  price: '€ 95.00',
                //   parentContext: context,
                 ),
                 ProductBox(
