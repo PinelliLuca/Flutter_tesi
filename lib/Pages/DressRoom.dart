@@ -7,16 +7,16 @@ class DressRoom extends StatefulWidget {
 
 class _DressRoomState extends State<DressRoom> {
   List<String> maglie = [
-    "assets/images/maglia1.png",
-    "assets/images/maglia2.jpeg",
-    "assets/images/maglia1.png",
+    "assets/images/juvemaglia1.jpeg",
+    "assets/images/juvemaglia2.jpg",
+    "assets/images/juvemaglia3.jpg",
     // Aggiungi altre immagini se necessario
   ];
 
   List<String> pantaloni = [
-    "assets/images/pantalone1-removebg.png",
-    "assets/images/pantalone1.jpg",
-    "assets/images/pantalone1-removebg.png",
+    "assets/images/juvepanta1.jpg",
+    "assets/images/juvepanta2.jpg",
+    "assets/images/juvepanta3.jpg",
     // Aggiungi altre immagini se necessario
   ];
 
@@ -98,6 +98,7 @@ class _DressRoomState extends State<DressRoom> {
                   child: Image.asset(
                     pantaloni[indexPantalone],
                     width: double.infinity,
+
                   ),
                 ),
                 IconButton(
