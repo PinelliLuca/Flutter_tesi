@@ -1,3 +1,4 @@
+import 'Visual3D.dart';
 import 'package:flutter/material.dart';
 import 'DressRoom.dart';
 import 'ShoppingCart.dart';
@@ -8,6 +9,7 @@ class Sport extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios, color: Colors.black),
           onPressed: () {
@@ -87,19 +89,19 @@ class Sport extends StatelessWidget {
                   imagePath: 'assets/images/milan2.jpg',
                   title: 'Milan',
                   price: '€ 90.00',
-              //    parentContext: context,
+                  //    parentContext: context,
                 ),
                 ProductBox(
                   imagePath: 'assets/images/juve.jpg',
                   title: 'Juventus',
                   price: '€ 95.00',
-               //   parentContext: context,
+                  //   parentContext: context,
                 ),
                 ProductBox(
                   imagePath: 'assets/images/mercurial.jpg',
                   title: 'Scarpe',
                   price: '€ 120.00',
-                //  parentContext: context,
+                  //  parentContext: context,
                 ),
 
                 // Qui per aggiungere altri prodotti ma non ci perdere tempo
@@ -116,27 +118,37 @@ class ProductBox extends StatelessWidget {
   final String imagePath;
   final String title;
   final String price;
- // final BuildContext parentContext;
+  // final BuildContext parentContext;
 
   ProductBox({
     required this.imagePath,
     required this.title,
     required this.price,
- //   required this.parentContext,
+    //   required this.parentContext,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-       //   parentContext,
+        if(title == 'Milan'){
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder:(context)=>Visual3D(),
+            ),
+          );
+        }
+        else {
+          Navigator.push(
+            context,
+            //   parentContext,
 
-          MaterialPageRoute(
-            builder: (context) => DressRoom(),
-          ),
-        );
+            MaterialPageRoute(
+              builder: (context) => DressRoom(),
+            ),
+          );
+        }
       },
       child: Container(
 
@@ -146,7 +158,7 @@ class ProductBox extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(imagePath),
-           fit: BoxFit.cover,
+            fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(15),
         ),
