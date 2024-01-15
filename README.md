@@ -1,3 +1,3 @@
 # Tesi di laurea triennale ingegneria informatica
 
-## Flutter: interfacce grafiche per dispositivi mobili
+## Flutter: interfacce grafiche innovative per dispositivi mobili
